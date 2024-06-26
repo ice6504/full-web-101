@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Dev 101</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="bg-black min-h-screen text-white grid place-items-center">
+      <div class="bg-blue-500 w-1/2 h-fit py-5 rounded-xl space-y-5">
+        <h1 id="heading" class="text-5xl text-center">Register form</h1>
+        <form
+          onsubmit="submitData(event)"
+          class="flex flex-col items-center gap-3"
+        >
+          <div class="flex gap-3">
+            <h3>ชื่อจริง</h3>
+            <input
+              type="text"
+              name="firstname"
+              class="rounded-xl text-black px-2"
+            />
+          </div>
+          <div class="flex gap-3">
+            <h3>นามสกุล</h3>
+            <input
+              type="text"
+              name="lastname"
+              class="rounded-xl text-black px-2"
+            />
+          </div>
+          <div class="flex gap-3">
+            <h3>อายุ</h3>
+            <input
+              type="number"
+              name="age"
+              class="rounded-xl text-black px-2"
+              min="1"
+              max="100"
+            />
+          </div>
+          <div class="flex gap-3">
+            <h3>เพศ</h3>
+            <div>
+              <input
+                type="radio"
+                name="gender"
+                class="rounded-xl text-black px-2"
+                value="ชาย"
+              />
+              ชาย
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="gender"
+                class="rounded-xl text-black px-2"
+                value="หญิง"
+              />
+              หญิง
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="gender"
+                class="rounded-xl text-black px-2"
+                value="ไม่ระบุ"
+              />
+              ไม่ระบุ
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <h3>สิ่งที่สนใจ</h3>
+            <div class="">
+              <input
+                type="checkbox"
+                name="interest"
+                class="rounded-xl text-black px-2"
+                value="หนังสือ"
+              />
+              หนังสือ
+            </div>
+            <div class="">
+              <input
+                type="checkbox"
+                name="interest"
+                class="rounded-xl text-black px-2"
+                value="เกม"
+              />
+              เกม
+            </div>
+            <div class="">
+              <input
+                type="checkbox"
+                name="interest"
+                class="rounded-xl text-black px-2"
+                value="ไม่รู้"
+              />
+              ไม่รู้
+            </div>
+          </div>
+          <div id="response-message" class="hidden"></div>
+          <button type="submit" class="w-20 h-fit bg-black rounded-full py-1">
+            Summit
+          </button>
+          <a class="underline text-black" href="user.html">User management</a>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
